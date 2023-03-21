@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.5px;
+    
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji-container{
+    background-color: rgba(225, 225, 225, 0.3);
+    padding: 30px;
+    font-size: 100px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.623);
+    cursor: pointer;
+}
+
+
+
+.emoji{
+    filter: grayscale();
+    transition: filter 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    font-weight: 400;
+    font-size: 60px;
+    /* color: rgb(155, 1, 31); */
+    
+}
+
+.emoji:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.emoji:active {
+    filter: grayscale(0);
+    transform: scale(0.9);
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    color: rgb(133, 43, 1);
+}
+
+.emoji-name{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(155, 1, 31);
+}
+
+.spinner-box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0);
+    /* background-color: transparent; */
+}
+
+.three-quarter-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #d67200;
+    border-top: 3px solid rgb(255, 180, 67);
+    border-radius: 50%;
+    animation: spin .5s linear 0s infinite;
+    filter: grayscale(0);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@media (max-width : 360px){
+ 
+
+ .emoji-container{
+    padding: 25px;
+    font-size: 50px;
+ }
+
+ .title{
+    font-size: 24px;
+ }
+
+ .emoji-name{
+    font-size: 16px;
+ }
+}
+@media (max-width : 600px){
+ 
+}
+@media (max-width : 1000px){
+ 
+}
